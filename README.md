@@ -1,44 +1,54 @@
 Step 1:
+--------
 Write the Terraform script to create the Nexus server
 
 Step 2:
+--------
 Clone the repository Get inside the nexus Directory and alter the AWS access_key, Secret_key, ami-ID, region, and keypair in nexus.tf file Alter the VPC id in nexus_sg.tf file
 
 Step 3:
+-------
 Now execute the terraform lifecycle commands as follows:
 
-Terraform init
-Terraform fmt
-Terraform validate
-Terraform plan
-Terraform apply
+1. Terraform init
+2. Terraform fmt
+3. Terraform validate
+4. Terraform plan
+5. Terraform apply
 Once executing all the commands infrastructure will be created in the AWS account
 
 Step 4:
+--------
 Write a terraform script to create the Jenkins server, For that get inside the Jenkins directory and alter the AWS access_key, Secret_key, ami-ID, region, and keypair in jenkins.tf file Alter the VPC id in jenkins_sg.tf file
 
 Step 5:
+--------
 Now execute the terraform lifecycle commands as follows:
 
-Terraform init
-Terraform fmt
-Terraform validate
-Terraform plan
-Terraform apply
+
+1. Terraform init
+2. Terraform fmt
+3. Terraform validate
+4. Terraform plan
+5. Terraform apply
 
 Step 6:
+--------
 Write a terraform script to create the SonarQube server, For that get inside the sonarqube directory and alter the AWS access_key, Secret_key, ami-ID, region, and keypair in sonarqube.tf file Alter the VPC id in sonarqube_sg.tf file
 
 Step 7:
+--------
 Now execute the terraform lifecycle commands as follows:
 
-Terraform init
-Terraform fmt
-Terraform validate
-Terraform plan
-Terraform apply
 
-Note
+1. Terraform init
+2. Terraform fmt
+3. Terraform validate
+4. Terraform plan
+5. Terraform apply
+
+Note:
+-----
 Make sure that your ami-ID, Keypair, and VPC id belong to the same region
 
 Now the infrastructure is created and now follow the further steps as mentioned below:
