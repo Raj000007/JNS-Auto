@@ -88,3 +88,4 @@ stage('UPLOAD ARTIFACT') {
                 }
         }
 }
+}
