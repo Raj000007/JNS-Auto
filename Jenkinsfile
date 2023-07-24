@@ -18,15 +18,10 @@ pipeline {
         SONARSCANNER = 'sonarscanner'
     }
     stages {
-        stage('Build') {
-            steps {
-                sh 'mvn -s settings.xml -DskipTests install -U'
-            }
-        }
     
     stage('Build') {
             steps {
-                sh 'mvn -s settings.xml -DskipTests install'
+                sh 'mvn -s settings.xml -DskipTests install -U'
             }
             post {
                 success {
