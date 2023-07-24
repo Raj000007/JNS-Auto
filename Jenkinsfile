@@ -76,7 +76,7 @@ stage('UPLOAD ARTIFACT') {
                         artifacts: [
                             [artifactId: 'vproapp' ,
                             classifier: '',
-                            file: 'target/vprofile.war',
+                            file: 'target/vprofile-v2.war',
                             type: 'war']
                         ]
                     )
