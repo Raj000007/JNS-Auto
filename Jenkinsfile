@@ -86,14 +86,14 @@ stage('UPLOAD ARTIFACT') {
 
         
 }
-post {
-     always {
-         echo "Post-build: Sending Slack notification..."
-         slackSend color: 'good', message: "Jenkins build successful: ${currentBuild.fullDisplayName}", webhookUrl: 'https://hooks.slack.com/services/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'
-     }
-     
-     // Add other post-build actions here
-}
+post{
+        always {
+            echo 'Slack Notifications'
+            slackSend channel: '#jenkinscicd',
+                
+                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD_URL}"
+        }
+    }
 
 
 
