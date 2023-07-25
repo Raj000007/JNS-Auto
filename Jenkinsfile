@@ -86,32 +86,25 @@ stage('UPLOAD ARTIFACT') {
 
         
 }
-     post {
-        always {
-            // This block will run always, regardless of the build result
-            echo "Post-build: Sending Slack notification..."
-            slackSend(channel: '#devops', color: 'good', message: "Jenkins build successful: ${currentBuild.fullDisplayName}")
+post {
+    always {
+        echo "Post-build: Sending Slack notification..."
+        script {
+            def slackMessage = "Jenkins build of ${env.JOB_NAME} #${env.BUILD_NUMBER} by rajesh was ${currentBuild.currentResult}"
+            slackSend(
+                channel: '#devops',
+                color: currentBuild.currentResult == 'SUCCESS' ? 'good' : 'danger',
+                message: slackMessage,
+                tokenCredentialId: 'slgu'
+            )
         }
-        
-        success {
-            // This block will run only if the build is successful
-            echo "Post-build: Build successful"
-            // Additional actions for successful builds
-        }
-        
-        failure {
-            // This block will run only if the build fails
-            echo "Post-build: Build failed"
-            // Additional actions for failed builds
-        }
-        
-        unstable {
-            // This block will run only if the build is unstable
-            echo "Post-build: Build unstable"
-            // Additional actions for unstable builds
-        }
-        
-        // Add more post-build actions as needed
     }
+}
+
+
+
+
+
+
 
 }
