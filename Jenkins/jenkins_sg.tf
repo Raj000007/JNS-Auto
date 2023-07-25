@@ -1,6 +1,6 @@
-resource "aws_security_group" "jenkins" {
-  name   = "jenkins"
-  vpc_id = "vpc-0ffa1068d307e7dc8"
+resource "aws_security_group" "jenkins_sg" {
+  name   = "jenkins_sg"
+  vpc_id = "vpc-09069368a2e5f3f2c"
 
   ingress {
     cidr_blocks = [
