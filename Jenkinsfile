@@ -82,7 +82,7 @@ stage('UPLOAD ARTIFACT') {
                     )
                 }
      }
-slack pending
+
 
         post{
         always {
