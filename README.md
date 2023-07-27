@@ -53,9 +53,11 @@ Make sure that your ami-ID, Keypair, and VPC id belong to the same region
 
 Now the infrastructure is created and now follow the further steps as mentioned below:
 
-**Note**
+*****************************************************************************************************************************************
 
-Instead of doing all these 7 steps, there is a shell script in this repository with the name **terr.sh** just open that file and alter the path of the Jenkins, nexus,and sonarqube path run **"sh terra.sh"**
+Instead of doing all these 7 steps, there is a shell script in this repository with the name **terr.sh** just open that file and alter the path of the Jenkins, nexus,and sonarqube then  run **"sh terra.sh"**
+
+****************************************************************************************************************************************
 
 Accessing the server using the publicip and port number
 ----------------------------------------------
