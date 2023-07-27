@@ -67,7 +67,7 @@ Access to Nexus server with the public_ip and port number 8081
 
 Step 1:
 -------
- Connect to nexus  create the repository as below:
+ login to the web interface of Nexus create the repository as below:
  
 1.maven2 hosted
    Name: Release
@@ -91,7 +91,7 @@ Step 1:
  Step 2:
 -------
  
-Connect to the sonar qube server 
+login to the web interface of sonar qube 
 
 1. Generate the tokens
     My account -> security 
@@ -111,7 +111,7 @@ Connect to the sonar qube server
 Step 3:
 ------
 
-Connect to jenkins server and do the configuration as below:
+login to the web interface of jenkins and do the configuration as below:
 
 1. Configure the java 
     Manage Jenkins -> Global Tool Configuration -> add jdk 
